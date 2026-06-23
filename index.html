@@ -1,0 +1,2642 @@
+html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ODES Medical Transportation | Reliable NEMT Services in Gardena, CA</title>
+<meta name="description" content="ODES Medical Transportation provides safe, reliable non-emergency medical transportation in Gardena, CA and surrounding areas. Wheelchair-accessible vans, dialysis transport, hospital discharge, and more.">
+<meta name="keywords" content="NEMT, non-emergency medical transportation, wheelchair transportation, medical transport Gardena CA, dialysis transportation, hospital discharge transport, senior transportation">
+<meta property="og:title" content="ODES Medical Transportation | Reliable NEMT Services">
+<meta property="og:description" content="Safe, comfortable, and dependable transportation for medical appointments, hospital visits, dialysis treatments, and more in Gardena, CA.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ODES Medical Transportation",
+  "description": "Non-Emergency Medical Transportation services in Gardena, CA",
+  "address": {{
+    "@type": "PostalAddress",
+    "streetAddress": "1204 W Gardena Blvd Suite B",
+    "addressLocality": "Gardena",
+    "addressRegion": "CA",
+    "postalCode": "90247"
+  }},
+  "telephone": "(310) 962-7922",
+  "email": "odesmedicaltransportation@yahoo.com"
+}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
+
+  :root {{
+    --navy: #0D1F3C;
+    --blue: #1558A8;
+    --teal: #0E9F8A;
+    --light-teal: #E6F7F5;
+    --light-blue: #EBF3FC;
+    --white: #FFFFFF;
+    --gray-50: #F7F9FC;
+    --gray-100: #EFF3F8;
+    --gray-200: #DDE5EF;
+    --gray-400: #8FA3BE;
+    --gray-600: #4A607A;
+    --gray-800: #1A2A3A;
+    --shadow-sm: 0 1px 4px rgba(13,31,60,0.07);
+    --shadow-md: 0 4px 20px rgba(13,31,60,0.10);
+    --shadow-lg: 0 10px 40px rgba(13,31,60,0.13);
+    --shadow-xl: 0 20px 60px rgba(13,31,60,0.17);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }}
+
+  html {{ scroll-behavior: smooth; }}
+
+  body {{
+    font-family: 'DM Sans', sans-serif;
+    color: var(--gray-800);
+    background: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }}
+
+  h1, h2, h3, h4, h5 {{
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+  }}
+
+  /* ===== NAVIGATION ===== */
+  nav {{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition);
+  }}
+
+  nav.scrolled {{ box-shadow: var(--shadow-md); }}
+
+  .nav-inner {{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }}
+
+  .nav-logo {{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    cursor: pointer;
+  }}
+
+  .logo-icon {{
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }}
+
+  .logo-icon svg {{ width: 24px; height: 24px; fill: white; }}
+
+  .logo-text {{ display: flex; flex-direction: column; line-height: 1; }}
+  .logo-text .brand {{ font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: var(--navy); }}
+  .logo-text .tagline {{ font-size: 10px; color: var(--blue); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }}
+
+  .nav-links {{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+  }}
+
+  .nav-links a {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--gray-600);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    cursor: pointer;
+  }}
+
+  .nav-links a:hover, .nav-links a.active {{ color: var(--blue); background: var(--light-blue); }}
+
+  .nav-cta {{ display: flex; align-items: center; gap: 10px; }}
+
+  .btn-call {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--blue);
+    text-decoration: none;
+    padding: 9px 18px;
+    border: 2px solid var(--blue);
+    border-radius: 50px;
+    transition: var(--transition);
+  }}
+
+  .btn-call:hover {{ background: var(--blue); color: white; }}
+
+  .btn-primary {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    border-radius: 50px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }}
+
+  .btn-primary:hover {{ transform: translateY(-2px); box-shadow: 0 8px 25px rgba(26,107,154,0.35); }}
+
+  .hamburger {{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+  }}
+
+  .hamburger span {{
+    width: 24px;
+    height: 2px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: var(--transition);
+    display: block;
+  }}
+
+  .mobile-menu {{
+    display: none;
+    position: fixed;
+    top: 72px; left: 0; right: 0; bottom: 0;
+    background: white;
+    z-index: 999;
+    padding: 24px;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+  }}
+
+  .mobile-menu.open {{ display: flex; }}
+
+  .mobile-menu a {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--navy);
+    text-decoration: none;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    cursor: pointer;
+    display: block;
+  }}
+
+  .mobile-menu a:hover {{ background: var(--light-blue); color: var(--blue); }}
+
+  .mobile-menu .mobile-cta {{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }}
+
+  .mobile-menu .mobile-cta .btn-primary,
+  .mobile-menu .mobile-cta .btn-call {{
+    text-align: center;
+    font-size: 16px;
+    padding: 16px 24px;
+  }}
+
+  /* ===== PAGE SYSTEM ===== */
+  .page {{ display: none; }}
+  .page.active {{ display: block; }}
+
+  /* ===== CINEMATIC HERO ANIMATION SECTION ===== */
+  #hero-scroll-container {{
+    position: relative;
+    /* Height controls how long the pin lasts — 400vh = 4 screens of scroll for animation */
+    height: 400vh;
+  }}
+
+  #hero-sticky {{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #04101E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }}
+
+  /* Ambient background glow layers */
+  .hero-ambient {{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }}
+
+  .ambient-glow-left {{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: -10%;
+    top: 0;
+    background: radial-gradient(ellipse at 40% 60%, rgba(21,88,168,0.18) 0%, transparent 65%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }}
+
+  .ambient-glow-right {{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: -10%;
+    top: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(14,159,138,0.15) 0%, transparent 65%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }}
+
+  .hero-ground-reflection {{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(21,88,168,0.08) 0%, transparent 100%);
+    z-index: 1;
+    opacity: 0;
+  }}
+
+  /* Van image container */
+  #van-stage {{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 40px;
+    will-change: transform;
+  }}
+
+  #van-image-wrap {{
+    position: relative;
+    width: 100%;
+    overflow: visible;
+  }}
+
+  #van-main-img {{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    filter: drop-shadow(0 40px 80px rgba(0,0,0,0.7)) drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+    will-change: transform, filter;
+    transform-origin: center center;
+  }}
+
+  /* Door overlay — simulates door closed state */
+  #van-door-overlay {{
+    position: absolute;
+    /* Positioned over the sliding door opening area */
+    /* The door opening is roughly from 40% to 68% horizontally, 5% to 95% vertically */
+    top: 5%;
+    left: 40%;
+    width: 28%;
+    height: 90%;
+    background: linear-gradient(160deg, #e8e8e8 0%, #d0d0d0 30%, #c0c0c0 60%, #a8a8a8 100%);
+    border-radius: 3px;
+    transform-origin: left center;
+    will-change: transform, opacity;
+    z-index: 12;
+    /* Subtle door panel detail */
+    box-shadow: inset -4px 0 12px rgba(0,0,0,0.2), inset 2px 0 6px rgba(255,255,255,0.3);
+    overflow: hidden;
+  }}
+
+  /* Red accent stripe on door */
+  #van-door-overlay::after {{
+    content: '';
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    height: 12%;
+    background: linear-gradient(90deg, #c8192d 0%, #e02035 50%, #c8192d 100%);
+    opacity: 0.9;
+  }}
+
+  /* Wheelchair accessible symbol on door */
+  #van-door-overlay::before {{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 28px;
+    height: 28px;
+    background: #1558A8;
+    border-radius: 4px;
+    opacity: 0.85;
+  }}
+
+  /* Lift platform overlay — revealed as door opens */
+  #van-lift-overlay {{
+    position: absolute;
+    bottom: 8%;
+    left: 40%;
+    width: 28%;
+    height: 6%;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+    transform-origin: top center;
+    will-change: transform, opacity;
+    z-index: 11;
+    opacity: 0;
+    border-bottom: 3px solid #f0c040;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  }}
+
+  /* Hero overlay text — fades in during animation */
+  #hero-text-overlay {{
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 80px 60px;
+    pointer-events: none;
+    opacity: 0;
+    will-change: opacity, transform;
+  }}
+
+  .hero-tag {{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(14,159,138,0.15);
+    border: 1px solid rgba(14,159,138,0.35);
+    color: #4DDDD2;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+  }}
+
+  .hero-tag-dot {{
+    width: 5px;
+    height: 5px;
+    background: #4DDDD2;
+    border-radius: 50%;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }}
+
+  @keyframes pulse-dot {{
+    0%, 100% {{ opacity: 1; transform: scale(1); }}
+    50% {{ opacity: 0.4; transform: scale(1.6); }}
+  }}
+
+  #hero-text-overlay h1 {{
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 560px;
+  }}
+
+  #hero-text-overlay h1 span {{
+    background: linear-gradient(135deg, #4DDDD2, #87CEEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }}
+
+  #hero-text-overlay p {{
+    font-size: 1rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.8;
+    max-width: 460px;
+    margin-bottom: 32px;
+  }}
+
+  .hero-text-buttons {{
+    display: flex;
+    gap: 14px;
+    pointer-events: all;
+    flex-wrap: wrap;
+  }}
+
+  .hero-btn-main {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--teal), #139A8E);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 8px 28px rgba(14,159,138,0.4);
+  }}
+
+  .hero-btn-main:hover {{ transform: translateY(-2px); box-shadow: 0 12px 36px rgba(14,159,138,0.5); }}
+
+  .hero-btn-ghost {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    padding: 12px 30px;
+    border: 2px solid rgba(255,255,255,0.45);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  }}
+
+  .hero-btn-ghost:hover {{ background: rgba(255,255,255,0.16); border-color: white; }}
+
+  /* Hero trust badges row */
+  #hero-trust-row {{
+    position: absolute;
+    top: 50%;
+    right: 48px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 20;
+    opacity: 0;
+    will-change: opacity, transform;
+  }}
+
+  .trust-badge {{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 190px;
+  }}
+
+  .trust-badge-icon {{
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(14,159,138,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }}
+
+  .trust-badge-icon svg {{ width: 18px; height: 18px; fill: var(--teal); }}
+
+  .trust-badge-text .label {{ font-size: 10px; color: rgba(255,255,255,0.45); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }}
+  .trust-badge-text .value {{ font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 700; color: white; }}
+
+  /* Scroll progress indicator */
+  #scroll-hint {{
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.45);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    will-change: opacity;
+  }}
+
+  .scroll-hint-bar {{
+    width: 1px;
+    height: 48px;
+    background: rgba(255,255,255,0.15);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1px;
+  }}
+
+  .scroll-hint-bar::after {{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--teal), transparent);
+    animation: scroll-bar-anim 1.8s ease-in-out infinite;
+  }}
+
+  @keyframes scroll-bar-anim {{
+    0% {{ top: -100%; }}
+    100% {{ top: 200%; }}
+  }}
+
+  /* Vignette overlay */
+  #hero-vignette {{
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(4,16,30,0.65) 100%);
+    z-index: 9;
+    pointer-events: none;
+  }}
+
+  /* Scan line texture for cinematic feel */
+  #hero-scanlines {{
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0,0,0,0.03) 3px,
+      rgba(0,0,0,0.03) 4px
+    );
+    pointer-events: none;
+    opacity: 0.4;
+  }}
+
+  /* After hero section — regular content */
+  #post-hero-content {{
+    background: white;
+  }}
+
+  /* ===== SECTION STYLES ===== */
+  section {{ padding: 100px 0; }}
+
+  .container {{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }}
+
+  .section-eyebrow {{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }}
+
+  .section-title {{
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }}
+
+  .section-subtitle {{
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    line-height: 1.8;
+  }}
+
+  .section-header {{ margin-bottom: 60px; }}
+  .section-header.centered {{ text-align: center; }}
+  .section-header.centered .section-subtitle {{ margin: 0 auto; }}
+
+  /* ===== SERVICES GRID ===== */
+  .services-grid {{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }}
+
+  .service-card {{
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+  }}
+
+  .service-card::before {{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, var(--blue), var(--teal));
+    transition: height 0.4s ease;
+    border-radius: 4px 0 0 4px;
+  }}
+
+  .service-card:hover {{ transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }}
+  .service-card:hover::before {{ height: 100%; }}
+
+  .service-icon {{
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: var(--transition);
+  }}
+
+  .service-card:hover .service-icon {{ background: linear-gradient(135deg, var(--blue), var(--teal)); }}
+
+  .service-icon svg {{ width: 28px; height: 28px; fill: var(--blue); transition: var(--transition); }}
+  .service-card:hover .service-icon svg {{ fill: white; }}
+  .service-card h3 {{ font-size: 1.15rem; color: var(--navy); margin-bottom: 12px; }}
+  .service-card p {{ font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 20px; }}
+
+  .service-link {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--blue);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+    cursor: pointer;
+    background: none;
+    border: none;
+  }}
+
+  .service-link:hover {{ color: var(--teal); gap: 10px; }}
+
+  /* ===== WHY CHOOSE US ===== */
+  .why-section {{ background: var(--navy); color: white; }}
+
+  .why-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }}
+
+  .why-card {{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    transition: var(--transition);
+  }}
+
+  .why-card:hover {{ background: rgba(255,255,255,0.10); transform: translateY(-4px); }}
+
+  .why-icon {{
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(14,159,138,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }}
+
+  .why-icon svg {{ width: 26px; height: 26px; fill: var(--teal); }}
+  .why-card h3 {{ font-size: 1.1rem; color: white; margin-bottom: 10px; }}
+  .why-card p {{ font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7; }}
+
+  /* ===== STATS ===== */
+  .stats-section {{ background: var(--light-blue); padding: 80px 0; }}
+
+  .stats-grid {{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+  }}
+
+  .stat-number {{
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 8px;
+  }}
+
+  .stat-number span {{ color: var(--teal); }}
+  .stat-label {{ font-size: 0.9rem; color: var(--gray-600); font-weight: 500; }}
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials-section {{ background: var(--gray-50); }}
+
+  .testimonials-grid {{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }}
+
+  .testimonial-card {{
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+  }}
+
+  .testimonial-card:hover {{ box-shadow: var(--shadow-md); transform: translateY(-4px); }}
+
+  .stars {{ display: flex; gap: 4px; margin-bottom: 16px; }}
+  .star {{ width: 18px; height: 18px; fill: #F59E0B; }}
+
+  .testimonial-card blockquote {{
+    font-size: 0.95rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-style: italic;
+  }}
+
+  .testimonial-author {{ display: flex; align-items: center; gap: 14px; }}
+
+  .author-avatar {{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    flex-shrink: 0;
+  }}
+
+  .author-info .name {{ font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 14px; color: var(--navy); }}
+  .author-info .role {{ font-size: 12px; color: var(--gray-400); }}
+
+  /* ===== CTA BANNER ===== */
+  .cta-banner {{
+    background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }}
+
+  .cta-banner::before {{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 60%),
+                radial-gradient(circle at 70% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+  }}
+
+  .cta-banner .container {{ position: relative; z-index: 2; }}
+  .cta-banner h2 {{ font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: white; margin-bottom: 16px; }}
+  .cta-banner p {{ font-size: 1.05rem; color: rgba(255,255,255,0.85); margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }}
+
+  .cta-banner-buttons {{ display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }}
+
+  .btn-white {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--navy);
+    text-decoration: none;
+    padding: 16px 36px;
+    background: white;
+    border-radius: 50px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+  }}
+
+  .btn-white:hover {{ transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }}
+
+  .btn-outline-white {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 14px 34px;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: var(--transition);
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    display: inline-block;
+  }}
+
+  .btn-outline-white:hover {{ background: rgba(255,255,255,0.2); transform: translateY(-2px); }}
+
+  /* ===== ABOUT PAGE ===== */
+  .about-hero {{
+    background: linear-gradient(160deg, var(--navy) 0%, #1a3a6b 100%);
+    padding: 160px 0 100px;
+    text-align: center;
+  }}
+
+  .about-hero h1 {{ color: white; font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 16px; }}
+  .about-hero p {{ color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }}
+
+  .about-story {{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }}
+
+  .about-img {{
+    border-radius: var(--radius-lg);
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--light-blue), var(--light-teal));
+    display: block;
+    overflow: hidden;
+  }}
+
+  .about-text .section-eyebrow {{ margin-bottom: 12px; }}
+  .about-text p {{ color: var(--gray-600); line-height: 1.9; margin-bottom: 20px; }}
+
+  .owner-section {{ background: var(--gray-50); }}
+
+  .owner-card {{
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    align-items: start;
+  }}
+
+  .owner-avatar {{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }}
+
+  .owner-avatar svg {{ width: 80px; height: 80px; fill: rgba(255,255,255,0.6); }}
+
+  .owner-info .name {{ font-family: 'Manrope', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }}
+  .owner-info .title {{ font-size: 0.9rem; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }}
+  .owner-info p {{ color: var(--gray-600); line-height: 1.9; margin-bottom: 16px; font-size: 0.95rem; }}
+
+  .values-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }}
+
+  .value-card {{
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    text-align: center;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+  }}
+
+  .value-card:hover {{ border-color: var(--teal); transform: translateY(-4px); box-shadow: var(--shadow-md); }}
+
+  .value-icon {{
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--light-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }}
+
+  .value-icon svg {{ width: 30px; height: 30px; fill: var(--teal); }}
+  .value-card h3 {{ font-size: 1rem; color: var(--navy); margin-bottom: 8px; }}
+  .value-card p {{ font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }}
+
+  .mv-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }}
+
+  .mv-card {{
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }}
+
+  .mv-card.mission {{ background: var(--navy); color: white; }}
+  .mv-card.vision {{ background: linear-gradient(135deg, var(--blue), var(--teal)); color: white; }}
+  .mv-card h3 {{ font-size: 1.4rem; color: white; margin-bottom: 16px; }}
+  .mv-card p {{ color: rgba(255,255,255,0.80); line-height: 1.9; font-size: 1rem; }}
+
+  /* ===== PAGE HERO ===== */
+  .page-hero {{
+    background: linear-gradient(160deg, var(--navy) 0%, #1a3a6b 100%);
+    padding: 160px 0 100px;
+    text-align: center;
+  }}
+
+  .page-hero h1 {{ color: white; font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 16px; }}
+  .page-hero p {{ color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }}
+
+  /* ===== SERVICES FULL PAGE ===== */
+  .services-full-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }}
+
+  .service-full-card {{
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+  }}
+
+  .service-full-card:hover {{ box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: transparent; }}
+
+  .service-card-img {{ height: 200px; overflow: hidden; display: block; }}
+  .service-card-img img {{ width: 100%; height: 100%; object-fit: cover; }}
+
+  .service-card-body {{ padding: 28px; }}
+  .service-card-body h3 {{ font-size: 1.2rem; color: var(--navy); margin-bottom: 12px; }}
+  .service-card-body p {{ font-size: 0.9rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 20px; }}
+
+  .btn-sm {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    border-radius: 50px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }}
+
+  .btn-sm:hover {{ transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,107,154,0.35); }}
+
+  /* ===== FLEET ===== */
+  .fleet-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }}
+
+  .fleet-card {{ background: white; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--gray-200); transition: var(--transition); }}
+  .fleet-card:hover {{ box-shadow: var(--shadow-lg); transform: translateY(-5px); }}
+
+  .fleet-img {{ height: 220px; overflow: hidden; display: block; }}
+  .fleet-img img {{ width: 100%; height: 100%; object-fit: cover; }}
+
+  .fleet-card-body {{ padding: 28px; }}
+  .fleet-card-body h3 {{ font-size: 1.15rem; color: var(--navy); margin-bottom: 8px; }}
+  .fleet-card-body p {{ font-size: 0.88rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; }}
+
+  .fleet-features {{ display: flex; flex-wrap: wrap; gap: 8px; }}
+
+  .fleet-tag {{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--light-blue);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 50px;
+  }}
+
+  .vehicle-features-section {{ background: var(--navy); }}
+
+  .features-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }}
+
+  .feature-item {{
+    text-align: center;
+    padding: 32px 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+  }}
+
+  .feature-item:hover {{ background: rgba(255,255,255,0.10); transform: translateY(-4px); }}
+  .feature-item svg {{ width: 40px; height: 40px; fill: var(--teal); margin-bottom: 16px; }}
+  .feature-item h4 {{ font-size: 1rem; color: white; margin-bottom: 8px; }}
+  .feature-item p {{ font-size: 0.85rem; color: rgba(255,255,255,0.60); line-height: 1.6; }}
+
+  /* ===== BOOKING ===== */
+  .booking-section {{ background: var(--gray-50); }}
+
+  .booking-wrap {{ display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: start; }}
+
+  .booking-info h2 {{ font-size: 1.8rem; color: var(--navy); margin-bottom: 16px; }}
+  .booking-info p {{ color: var(--gray-600); line-height: 1.8; margin-bottom: 32px; }}
+
+  .booking-contact-list {{ display: flex; flex-direction: column; gap: 16px; }}
+
+  .booking-contact-item {{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: white;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+  }}
+
+  .bc-icon {{ width: 42px; height: 42px; border-radius: 12px; background: var(--light-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }}
+  .bc-icon svg {{ width: 20px; height: 20px; fill: var(--blue); }}
+  .booking-contact-item .label {{ font-size: 11px; color: var(--gray-400); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }}
+  .booking-contact-item .value {{ font-weight: 600; color: var(--navy); font-size: 0.9rem; }}
+
+  .booking-form-card {{ background: white; border-radius: var(--radius-lg); padding: 48px; box-shadow: var(--shadow-md); }}
+
+  .form-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }}
+  .form-group {{ display: flex; flex-direction: column; gap: 8px; }}
+  .form-group.full {{ grid-column: 1 / -1; }}
+
+  .form-group label {{ font-size: 13px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; }}
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--gray-800);
+    background: var(--gray-50);
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    transition: var(--transition);
+    outline: none;
+    width: 100%;
+  }}
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {{
+    border-color: var(--blue);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(26,107,154,0.10);
+  }}
+
+  .form-group textarea {{ min-height: 100px; resize: vertical; }}
+  .form-submit {{ margin-top: 28px; }}
+
+  .btn-submit {{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }}
+
+  .btn-submit:hover {{ transform: translateY(-2px); box-shadow: 0 10px 30px rgba(26,107,154,0.35); }}
+  .btn-submit svg {{ width: 20px; height: 20px; fill: white; }}
+
+  .form-note {{ margin-top: 12px; font-size: 12px; color: var(--gray-400); text-align: center; line-height: 1.6; }}
+
+  /* ===== CONTACT ===== */
+  .contact-grid {{ display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: start; }}
+  .contact-info {{ display: flex; flex-direction: column; gap: 20px; }}
+
+  .contact-info-card {{
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 24px;
+    border: 1px solid var(--gray-200);
+    display: flex;
+    gap: 16px;
+    align-items: start;
+    transition: var(--transition);
+  }}
+
+  .contact-info-card:hover {{ box-shadow: var(--shadow-sm); border-color: var(--blue); }}
+
+  .ci-icon {{ width: 48px; height: 48px; border-radius: 14px; background: var(--light-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }}
+  .ci-icon svg {{ width: 22px; height: 22px; fill: var(--blue); }}
+  .ci-label {{ font-size: 11px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }}
+  .ci-value {{ font-weight: 600; color: var(--navy); font-size: 0.95rem; line-height: 1.5; }}
+  .ci-value a {{ color: var(--navy); text-decoration: none; }}
+  .ci-value a:hover {{ color: var(--blue); }}
+
+  .hours-table {{ width: 100%; }}
+  .hours-table tr td {{ padding: 4px 0; font-size: 0.88rem; color: var(--gray-600); }}
+  .hours-table tr td:first-child {{ font-weight: 600; color: var(--navy); }}
+
+  .contact-form-wrap {{ background: white; border-radius: var(--radius-lg); padding: 48px; box-shadow: var(--shadow-md); }}
+  .contact-form-wrap h2 {{ font-size: 1.6rem; color: var(--navy); margin-bottom: 8px; }}
+  .contact-form-wrap .sub {{ color: var(--gray-600); margin-bottom: 32px; font-size: 0.95rem; }}
+
+  .map-wrap {{ margin-top: 60px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }}
+  .map-wrap iframe {{ width: 100%; height: 420px; border: none; display: block; }}
+
+  /* ===== ABOUT PREVIEW ===== */
+  .about-preview {{ display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }}
+
+  .about-preview-img {{
+    border-radius: var(--radius-lg);
+    aspect-ratio: 5/4;
+    background: linear-gradient(135deg, var(--navy) 0%, #1A6B9A 60%, var(--teal) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }}
+
+  .about-preview-img svg {{ width: 120px; height: 120px; fill: rgba(255,255,255,0.2); }}
+
+  .about-preview-text .section-eyebrow {{ margin-bottom: 12px; }}
+  .about-preview-text h2 {{ margin-bottom: 20px; }}
+  .about-preview-text p {{ color: var(--gray-600); line-height: 1.9; margin-bottom: 16px; }}
+
+  /* ===== FOOTER ===== */
+  footer {{ background: var(--navy); color: white; padding: 80px 0 0; }}
+
+  .footer-grid {{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+  }}
+
+  .footer-brand .logo-text .brand {{ color: white; font-size: 20px; }}
+  .footer-brand .logo-text .tagline {{ color: rgba(255,255,255,0.5); }}
+
+  .footer-desc {{ font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.9; margin-top: 20px; margin-bottom: 24px; }}
+
+  .footer-social {{ display: flex; gap: 12px; }}
+
+  .social-link {{
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    text-decoration: none;
+  }}
+
+  .social-link:hover {{ background: var(--teal); }}
+  .social-link svg {{ width: 16px; height: 16px; fill: white; }}
+
+  .footer-col h4 {{ font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); margin-bottom: 20px; }}
+  .footer-links {{ display: flex; flex-direction: column; gap: 10px; }}
+
+  .footer-links a {{ font-size: 0.9rem; color: rgba(255,255,255,0.65); text-decoration: none; transition: var(--transition); cursor: pointer; }}
+  .footer-links a:hover {{ color: white; padding-left: 4px; }}
+
+  .footer-contact {{ display: flex; flex-direction: column; gap: 14px; }}
+
+  .footer-contact-item {{ display: flex; align-items: flex-start; gap: 12px; font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.6; }}
+  .footer-contact-item svg {{ width: 16px; height: 16px; fill: var(--teal); flex-shrink: 0; margin-top: 2px; }}
+
+  .footer-bottom {{ padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }}
+  .footer-bottom p {{ font-size: 13px; color: rgba(255,255,255,0.40); }}
+
+  /* ===== SCROLL ANIMATIONS ===== */
+  .fade-up {{ opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }}
+  .fade-up.visible {{ opacity: 1; transform: translateY(0); }}
+  .fade-in {{ opacity: 0; transition: opacity 0.7s ease; }}
+  .fade-in.visible {{ opacity: 1; }}
+  .stagger-child {{ opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }}
+  .stagger-child.visible {{ opacity: 1; transform: translateY(0); }}
+
+  /* ===== SUCCESS MESSAGE ===== */
+  .success-msg {{
+    display: none;
+    background: var(--light-teal);
+    border: 1px solid var(--teal);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    color: #0f6b62;
+    font-size: 0.95rem;
+    margin-top: 20px;
+    text-align: center;
+  }}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {{
+    .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
+    .about-story {{ grid-template-columns: 1fr; gap: 40px; }}
+    .owner-card {{ grid-template-columns: 1fr; }}
+    .owner-avatar {{ width: 140px; height: 140px; }}
+    .mv-grid {{ grid-template-columns: 1fr; }}
+    .booking-wrap {{ grid-template-columns: 1fr; }}
+    .contact-grid {{ grid-template-columns: 1fr; }}
+    .about-preview {{ grid-template-columns: 1fr; gap: 40px; }}
+    .footer-grid {{ grid-template-columns: 1fr 1fr; gap: 40px; }}
+    #hero-trust-row {{ display: none; }}
+    #hero-text-overlay {{ padding: 0 0 60px 40px; }}
+  }}
+
+  @media (max-width: 768px) {{
+    section {{ padding: 70px 0; }}
+    .nav-links {{ display: none; }}
+    .nav-cta {{ display: none; }}
+    .hamburger {{ display: flex; }}
+    .stats-grid {{ grid-template-columns: repeat(2, 1fr); gap: 24px; }}
+    .services-full-grid {{ grid-template-columns: 1fr; }}
+    .form-grid {{ grid-template-columns: 1fr; }}
+    .form-group.full {{ grid-column: 1; }}
+    .booking-form-card {{ padding: 28px 20px; }}
+    .contact-form-wrap {{ padding: 28px 20px; }}
+    .footer-grid {{ grid-template-columns: 1fr; gap: 32px; }}
+    .footer-bottom {{ flex-direction: column; text-align: center; }}
+    .cta-banner-buttons {{ flex-direction: column; align-items: center; }}
+    .btn-white, .btn-outline-white {{ width: 100%; max-width: 300px; text-align: center; }}
+    .services-grid {{ grid-template-columns: 1fr; }}
+    .why-grid {{ grid-template-columns: 1fr; }}
+    .testimonials-grid {{ grid-template-columns: 1fr; }}
+    .values-grid {{ grid-template-columns: repeat(2, 1fr); }}
+    .fleet-grid {{ grid-template-columns: 1fr; }}
+    #hero-text-overlay {{ padding: 0 20px 40px 20px; align-items: center; text-align: center; }}
+    #hero-text-overlay h1 {{ font-size: 1.7rem; }}
+    .hero-text-buttons {{ justify-content: center; }}
+    #van-stage {{ padding: 0 16px; }}
+    #scroll-hint {{ display: none; }}
+  }}
+
+  @media (max-width: 480px) {{
+    .values-grid {{ grid-template-columns: 1fr; }}
+    .stats-grid {{ grid-template-columns: 1fr 1fr; gap: 16px; }}
+  }}
+
+  @media (prefers-reduced-motion: reduce) {{
+    *, *::before, *::after {{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }}
+    .fade-up, .fade-in, .stagger-child {{ opacity: 1; transform: none; }}
+    #hero-scroll-container {{ height: auto; }}
+    #hero-sticky {{ position: relative; height: auto; min-height: 100vh; }}
+    #van-door-overlay {{ display: none; }}
+    #hero-text-overlay {{ opacity: 1; }}
+    #hero-trust-row {{ opacity: 1; }}
+    #scroll-hint {{ display: none; }}
+    .ambient-glow-left, .ambient-glow-right {{ opacity: 1; }}
+    .hero-ground-reflection {{ opacity: 1; }}
+  }}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="showPage('home')">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      </div>
+      <div class="logo-text">
+        <span class="brand">ODES Medical</span>
+        <span class="tagline">Transportation</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')" id="nav-home">Home</a></li>
+      <li><a onclick="showPage('about')" id="nav-about">About Us</a></li>
+      <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
+      <li><a onclick="showPage('fleet')" id="nav-fleet">Fleet</a></li>
+      <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:3109627922" class="btn-call">Call Now</a>
+      <button class="btn-primary" onclick="showPage('book')">Book a Ride</button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home'); closeMenu()">Home</a>
+  <a onclick="showPage('about'); closeMenu()">About Us</a>
+  <a onclick="showPage('services'); closeMenu()">Services</a>
+  <a onclick="showPage('fleet'); closeMenu()">Fleet</a>
+  <a onclick="showPage('contact'); closeMenu()">Contact</a>
+  <div class="mobile-cta">
+    <button class="btn-primary" onclick="showPage('book'); closeMenu()">Book a Ride</button>
+    <a href="tel:3109627922" class="btn-call">Call (310) 962-7922</a>
+  </div>
+</div>
+
+<!-- ==================== HOME PAGE ==================== -->
+<div id="page-home" class="page active">
+
+  <!-- CINEMATIC SCROLL HERO -->
+  <div id="hero-scroll-container">
+    <div id="hero-sticky">
+
+      <!-- Background scanlines texture -->
+      <div id="hero-scanlines"></div>
+
+      <!-- Ambient glow layers -->
+      <div class="hero-ambient">
+        <div class="ambient-glow-left" id="ambientLeft"></div>
+        <div class="ambient-glow-right" id="ambientRight"></div>
+      </div>
+
+      <!-- Ground reflection -->
+      <div class="hero-ground-reflection" id="groundReflection"></div>
+
+      <!-- Vignette -->
+      <div id="hero-vignette"></div>
+
+      <!-- Van stage — the main animated element -->
+      <div id="van-stage">
+        <div id="van-image-wrap">
+          <!-- The actual ODES van photo -->
+          <img
+            id="van-main-img"
+            src="{van_data_uri}"
+            alt="ODES Medical Transportation — Non-Emergency Medical Transportation Van with Wheelchair Lift"
+          >
+          <!-- Door overlay slides away to reveal interior -->
+          <div id="van-door-overlay"></div>
+          <!-- Lift platform descends -->
+          <div id="van-lift-overlay"></div>
+        </div>
+      </div>
+
+      <!-- Text content fades in as animation progresses -->
+      <div id="hero-text-overlay">
+        <div class="hero-tag">
+          <div class="hero-tag-dot"></div>
+          Serving Gardena, CA and Surrounding Areas
+        </div>
+        <h1>Reliable Non-Emergency<br>Medical Transportation<br><span>You Can Trust</span></h1>
+        <p>Safe, comfortable, and dependable transportation for medical appointments, hospital visits, dialysis treatments, rehabilitation services, and more.</p>
+        <div class="hero-text-buttons">
+          <button class="hero-btn-main" onclick="showPage('book')">Book Your Ride</button>
+          <a href="tel:3109627922" class="hero-btn-ghost">
+            <svg viewBox="0 0 24 24" style="width:17px;height:17px;fill:white;flex-shrink:0"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            (310) 962-7922
+          </a>
+        </div>
+      </div>
+
+      <!-- Right-side trust badges -->
+      <div id="hero-trust-row">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <div class="trust-badge-text">
+            <div class="label">On-Time Rate</div>
+            <div class="value">98%</div>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <div class="trust-badge-text">
+            <div class="label">Patients Served</div>
+            <div class="value">5,000+</div>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 13v-2h-2V9h-2v2h-2v2h2v2h2v-2h2zm-7-2H5c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h7c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1z"/></svg>
+          </div>
+          <div class="trust-badge-text">
+            <div class="label">Fleet</div>
+            <div class="value">Wheelchair Accessible</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator (visible only at start) -->
+      <div id="scroll-hint">
+        <div class="scroll-hint-bar"></div>
+        Scroll to explore
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REST OF HOME CONTENT -->
+  <div id="post-hero-content">
+
+    <!-- SERVICES PREVIEW -->
+    <section>
+      <div class="container">
+        <div class="section-header centered fade-up">
+          <span class="section-eyebrow">What We Offer</span>
+          <h2 class="section-title">Comprehensive Medical Transportation Services</h2>
+          <p class="section-subtitle">Tailored transportation solutions for every medical need, delivered with care and professionalism.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card stagger-child" style="transition-delay:0s">
+            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg></div>
+            <h3>Ambulatory Transportation</h3>
+            <p>Safe, comfortable transport for patients who can walk independently or with minimal assistance to and from medical appointments.</p>
+            <button class="service-link" onclick="showPage('services')">Learn More <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+          </div>
+          <div class="service-card stagger-child" style="transition-delay:0.1s">
+            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M19 13v-2h-2V9h-2v2h-2v2h2v2h2v-2h2zm-7-2H5c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h7c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zm-1 6H6v-4h5v4zM5 9h8V7H5c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h1v-2H5V9z"/></svg></div>
+            <h3>Wheelchair Transportation</h3>
+            <p>Fully equipped wheelchair-accessible vehicles with trained attendants ensuring safe, dignified transport for mobility-impaired patients.</p>
+            <button class="service-link" onclick="showPage('services')">Learn More <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+          </div>
+          <div class="service-card stagger-child" style="transition-delay:0.2s">
+            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div>
+            <h3>Hospital Discharge Transportation</h3>
+            <p>Reliable and prompt transportation ensuring patients get home safely and comfortably following inpatient hospital stays.</p>
+            <button class="service-link" onclick="showPage('services')">Learn More <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+          </div>
+          <div class="service-card stagger-child" style="transition-delay:0.3s">
+            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <h3>Dialysis Transportation</h3>
+            <p>Consistent, scheduled transportation for dialysis patients requiring frequent trips to treatment centers, three times a week or more.</p>
+            <button class="service-link" onclick="showPage('services')">Learn More <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+          </div>
+          <div class="service-card stagger-child" style="transition-delay:0.4s">
+            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg></div>
+            <h3>Rehabilitation Transportation</h3>
+            <p>Supportive transport for patients attending physical therapy, occupational therapy, and rehabilitation programs on a regular basis.</p>
+            <button class="service-link" onclick="showPage('services')">Learn More <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+          </div>
+          <div class="service-card stagger-child" style="transition-delay:0.5s">
+            <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+            <h3>Senior Transportation</h3>
+            <p>Compassionate, patient transportation services designed specifically for elderly patients requiring extra time and care during travel.</p>
+            <button class="service-link" onclick="showPage('services')">Learn More <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-section">
+      <div class="container">
+        <div class="section-header centered fade-up">
+          <span class="section-eyebrow" style="color:#5EDDD2">Why Choose ODES</span>
+          <h2 class="section-title" style="color:white">Your Safety and Comfort Is Our Priority</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.65)">We go above and beyond to ensure every patient receives exceptional care from pickup to drop-off.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card stagger-child">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
+            <h3>Safety First</h3>
+            <p>Every ride is conducted with the highest safety standards. Our vehicles undergo rigorous maintenance, and our drivers are thoroughly trained in passenger safety.</p>
+          </div>
+          <div class="why-card stagger-child" style="transition-delay:0.1s">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+            <h3>Professional Drivers</h3>
+            <p>Our drivers are carefully selected, background-checked, and trained to assist patients with respect and compassion. They understand the sensitivity of medical transportation.</p>
+          </div>
+          <div class="why-card stagger-child" style="transition-delay:0.2s">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div>
+            <h3>Reliable Scheduling</h3>
+            <p>We understand that medical appointments cannot be missed. Our scheduling system ensures you are picked up on time, every time, without fail.</p>
+          </div>
+          <div class="why-card stagger-child" style="transition-delay:0.3s">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99z"/></svg></div>
+            <h3>Comfortable Vehicles</h3>
+            <p>Our modern fleet is equipped with climate control, comfortable seating, and all necessary accessibility equipment to make every journey as comfortable as possible.</p>
+          </div>
+          <div class="why-card stagger-child" style="transition-delay:0.4s">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+            <h3>On-Time Service</h3>
+            <p>Punctuality is at the core of what we do. We track appointments and plan routes in advance to ensure timely arrivals for every single ride.</p>
+          </div>
+          <div class="why-card stagger-child" style="transition-delay:0.5s">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+            <h3>Patient-Focused Care</h3>
+            <p>Every decision we make is centered on patient well-being. From driver training to vehicle selection, the patient's comfort and dignity always come first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item fade-up">
+            <div class="stat-number"><span class="counter" data-target="5000">0</span><span>+</span></div>
+            <div class="stat-label">Patients Served</div>
+          </div>
+          <div class="stat-item fade-up" style="transition-delay:0.1s">
+            <div class="stat-number"><span class="counter" data-target="20000">0</span><span>+</span></div>
+            <div class="stat-label">Rides Completed</div>
+          </div>
+          <div class="stat-item fade-up" style="transition-delay:0.2s">
+            <div class="stat-number"><span class="counter" data-target="98">0</span><span>%</span></div>
+            <div class="stat-label">On-Time Rate</div>
+          </div>
+          <div class="stat-item fade-up" style="transition-delay:0.3s">
+            <div class="stat-number"><span class="counter" data-target="99">0</span><span>%</span></div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section>
+      <div class="container">
+        <div class="about-preview">
+          <div class="about-preview-img fade-in">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div class="about-preview-text fade-up">
+            <span class="section-eyebrow">Our Story</span>
+            <h2 class="section-title">Built on a Foundation of Compassion and Reliability</h2>
+            <p>ODES Medical Transportation was founded with a clear purpose: to eliminate the barriers that prevent patients from accessing the medical care they need. We recognized that unreliable transportation is one of the leading causes of missed appointments and deteriorating health outcomes.</p>
+            <p>Under the leadership of Eugene Nkem Odega, ODES has grown into a trusted transportation partner for patients throughout Gardena and the greater Los Angeles area, providing safe, dignified, and dependable rides to those who need them most.</p>
+            <button class="btn-primary" onclick="showPage('about')">Learn Our Story</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header centered fade-up">
+          <span class="section-eyebrow">Patient Stories</span>
+          <h2 class="section-title">What Our Riders Say</h2>
+          <p class="section-subtitle">Real experiences from real patients who trust ODES Medical Transportation.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card stagger-child">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <blockquote>"I have been using ODES for my dialysis appointments three times a week for over a year. They are always on time, always professional, and the drivers genuinely care about my well-being. I could not manage without them."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:linear-gradient(135deg,#1A6B9A,#1B998B)">MR</div>
+              <div class="author-info">
+                <div class="name">Margaret R.</div>
+                <div class="role">Dialysis Patient, Compton</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card stagger-child" style="transition-delay:0.1s">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <blockquote>"After my hip replacement surgery, getting home from the hospital safely was my biggest concern. ODES arranged everything perfectly. The driver was gentle, patient, and helped me every step of the way. Truly exceptional service."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:linear-gradient(135deg,#0B2545,#1A6B9A)">JT</div>
+              <div class="author-info">
+                <div class="name">James T.</div>
+                <div class="role">Post-Surgery Patient, Torrance</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card stagger-child" style="transition-delay:0.2s">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <blockquote>"My mother is 84 years old and uses a wheelchair. Finding someone we could trust to transport her safely was a challenge until we found ODES. The peace of mind we have knowing she is in good hands is priceless."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:linear-gradient(135deg,#1B998B,#0B2545)">SL</div>
+              <div class="author-info">
+                <div class="name">Sandra L.</div>
+                <div class="role">Family Caregiver, Hawthorne</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="fade-up">Need Safe Medical Transportation?</h2>
+        <p class="fade-up">Book your ride today and experience the ODES difference. Reliable, professional, and always on time.</p>
+        <div class="cta-banner-buttons fade-up">
+          <button class="btn-white" onclick="showPage('book')">Book Your Ride Today</button>
+          <a href="tel:3109627922" class="btn-outline-white">Call (310) 962-7922</a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /post-hero-content -->
+
+</div><!-- /page-home -->
+
+<!-- ==================== ABOUT PAGE ==================== -->
+<div id="page-about" class="page">
+
+  <div class="about-hero">
+    <div class="container">
+      <span class="section-eyebrow" style="color:#5EDDD2;display:block;margin-bottom:16px">Our Story</span>
+      <h1>About ODES Medical Transportation</h1>
+      <p>A patient-centered transportation company built on compassion, reliability, and a deep commitment to community care.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="about-story">
+        <div class="about-img fade-in" style="background:none;overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&auto=format&fit=crop&q=80" alt="Medical transport driver assisting patient" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);" loading="lazy">
+        </div>
+        <div class="about-text fade-up">
+          <span class="section-eyebrow">Our History</span>
+          <h2 class="section-title">Transportation Built Around the Patient</h2>
+          <p>ODES Medical Transportation was established with a singular mission: to provide reliable, dignified, and compassionate non-emergency medical transportation to patients throughout the greater Los Angeles area. We recognized a critical gap in healthcare access — many patients miss vital appointments simply because they have no safe way to get there.</p>
+          <p>From our first ride, we committed to doing things differently. We invested in properly equipped vehicles, hired and trained compassionate drivers, and built scheduling systems that put patient needs first. Every process, policy, and practice at ODES is designed with one question in mind: what does the patient need?</p>
+          <p>Today, ODES serves thousands of patients from our base in Gardena, California, providing wheelchair-accessible transport, dialysis transportation, hospital discharge rides, and much more across the region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="owner-section">
+    <div class="container">
+      <div class="section-header centered fade-up">
+        <span class="section-eyebrow">Leadership</span>
+        <h2 class="section-title">Meet Our Owner</h2>
+      </div>
+      <div class="owner-card fade-up">
+        <div class="owner-avatar" style="overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&auto=format&fit=crop&q=80" alt="Eugene Nkem Odega - Founder" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+        </div>
+        <div class="owner-info">
+          <div class="name">Eugene Nkem Odega</div>
+          <div class="title">Founder and Owner, ODES Medical Transportation</div>
+          <p>Eugene Nkem Odega founded ODES Medical Transportation with a vision rooted in personal conviction: that every patient, regardless of their mobility, financial situation, or circumstances, deserves safe and dependable transportation to their medical appointments.</p>
+          <p>With a background in patient care and community service, Eugene understands firsthand how critical reliable transportation is to health outcomes. He has seen too many patients miss chemotherapy sessions, dialysis appointments, and follow-up visits simply because they lacked a safe way to get there. ODES was built to change that reality.</p>
+          <p>Under Eugene's leadership, ODES has grown into a trusted name in the Gardena community and beyond. He personally oversees driver training, vehicle standards, and customer service protocols, ensuring that every rider receives the respectful, attentive care they deserve.</p>
+          <p>Eugene believes that transportation is not just a logistical service — it is an act of care. He leads ODES with that principle at the forefront, and it shows in every ride the company provides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="mv-grid fade-up">
+        <div class="mv-card mission">
+          <span class="section-eyebrow" style="color:#5EDDD2">Our Mission</span>
+          <h3>Why We Exist</h3>
+          <p>To provide safe, reliable, and compassionate non-emergency medical transportation that removes barriers to healthcare access, improves health outcomes, and restores dignity and independence to every patient we serve.</p>
+        </div>
+        <div class="mv-card vision">
+          <span class="section-eyebrow" style="color:rgba(255,255,255,0.7)">Our Vision</span>
+          <h3>Where We Are Headed</h3>
+          <p>To be the most trusted non-emergency medical transportation provider in California — recognized not just for the reliability of our service, but for the quality of our care, the integrity of our team, and the positive impact we have on the communities we serve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--gray-50)">
+    <div class="container">
+      <div class="section-header centered fade-up">
+        <span class="section-eyebrow">What We Stand For</span>
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-subtitle">These principles guide every decision we make and every ride we provide.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card stagger-child">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+          <h3>Safety</h3>
+          <p>The physical safety of every passenger is our highest priority, maintained through rigorous standards and continuous training.</p>
+        </div>
+        <div class="value-card stagger-child" style="transition-delay:0.1s">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+          <h3>Respect</h3>
+          <p>Every patient is treated with dignity, kindness, and the utmost respect, regardless of their condition, background, or circumstances.</p>
+        </div>
+        <div class="value-card stagger-child" style="transition-delay:0.2s">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div>
+          <h3>Reliability</h3>
+          <p>We show up when we say we will. Dependability is not a bonus — it is the foundation of everything we do at ODES.</p>
+        </div>
+        <div class="value-card stagger-child" style="transition-delay:0.3s">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+          <h3>Compassion</h3>
+          <p>We understand that our riders may be going through difficult times. We approach every interaction with empathy and genuine care.</p>
+        </div>
+        <div class="value-card stagger-child" style="transition-delay:0.4s">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <h3>Excellence</h3>
+          <p>We hold ourselves to the highest standards in every aspect of our service, from vehicle cleanliness to driver professionalism to scheduling accuracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Experience Patient-Centered Transportation?</h2>
+      <p>Book your first ride with ODES Medical Transportation today.</p>
+      <div class="cta-banner-buttons">
+        <button class="btn-white" onclick="showPage('book')">Book Your Ride</button>
+        <a href="tel:3109627922" class="btn-outline-white">Call (310) 962-7922</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ==================== SERVICES PAGE ==================== -->
+<div id="page-services" class="page">
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-eyebrow" style="color:#5EDDD2;display:block;margin-bottom:16px">What We Provide</span>
+      <h1>Our Transportation Services</h1>
+      <p>Comprehensive non-emergency medical transportation tailored to every patient's unique needs and medical situation.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="services-full-grid">
+        <div class="service-full-card stagger-child">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=700&auto=format&fit=crop&q=80" alt="Ambulatory transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Ambulatory Transportation</h3>
+            <p>Designed for patients who are mobile but require safe, reliable transport to and from medical appointments. Our drivers provide door-to-door assistance, ensuring patients are comfortable from the moment they leave home to the moment they return.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.05s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&auto=format&fit=crop&q=80" alt="Wheelchair transportation service" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Wheelchair Transportation</h3>
+            <p>Our wheelchair-accessible vehicles are specially outfitted with ramps, lifts, and secure tie-down systems to safely accommodate manual and power wheelchairs. Trained attendants assist with boarding and disembarking.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.1s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=700&auto=format&fit=crop&q=80" alt="Medical appointment transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Medical Appointment Transportation</h3>
+            <p>Scheduled, reliable transport to any medical appointment — primary care, specialist, dental, vision, mental health, and more. We track your appointment time and plan pickup windows strategically so you never arrive late.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.15s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=700&auto=format&fit=crop&q=80" alt="Hospital discharge transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Hospital Discharge Transportation</h3>
+            <p>Transitioning home from a hospital stay is a vulnerable moment. Our hospital discharge service ensures patients are transported home safely, comfortably, and without delay. We coordinate directly with hospital discharge teams.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.2s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=700&auto=format&fit=crop&q=80" alt="Dialysis transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Dialysis Transportation</h3>
+            <p>Dialysis patients require transportation multiple times per week, every week, without fail. We specialize in scheduled dialysis transport, building consistent, reliable routes and times around each patient's treatment schedule.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.25s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&auto=format&fit=crop&q=80" alt="Physical therapy transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Physical Therapy Transportation</h3>
+            <p>Consistent attendance at physical therapy appointments is critical to recovery. We provide dependable transport to PT sessions, helping patients complete their prescribed treatment courses without disruption.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.3s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=700&auto=format&fit=crop&q=80" alt="Rehabilitation transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Rehabilitation Transportation</h3>
+            <p>For patients recovering from strokes, traumatic injuries, or major surgeries, ODES provides reliable transport to inpatient and outpatient rehabilitation centers, ensuring patients can access the intensive therapies that support their recovery.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.35s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&auto=format&fit=crop&q=80" alt="Senior transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Senior Transportation</h3>
+            <p>Elderly patients deserve transportation that is unhurried, respectful, and attentive to their individual needs. Our senior transportation service offers extra time for boarding and alighting, with drivers trained in senior care sensitivity.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+        <div class="service-full-card stagger-child" style="transition-delay:0.4s">
+          <div class="service-card-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=700&auto=format&fit=crop&q=80" alt="Long distance medical transportation" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3>Long Distance Medical Transportation</h3>
+            <p>Specialized medical facilities and research hospitals often require patients to travel significant distances. Our long-distance service extends our commitment to comfort and safety over extended journeys, with climate-controlled vehicles and attendants available when needed.</p>
+            <button class="btn-sm" onclick="showPage('book')">Book This Service</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Not Sure Which Service You Need?</h2>
+      <p>Call us and we will help you identify the right transportation solution for your specific situation.</p>
+      <div class="cta-banner-buttons">
+        <a href="tel:3109627922" class="btn-white">Call (310) 962-7922</a>
+        <button class="btn-outline-white" onclick="showPage('book')">Book Online</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ==================== FLEET PAGE ==================== -->
+<div id="page-fleet" class="page">
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-eyebrow" style="color:#5EDDD2;display:block;margin-bottom:16px">Our Vehicles</span>
+      <h1>Modern, Safe, Accessible Fleet</h1>
+      <p>Every vehicle in our fleet is maintained to the highest standards, fully equipped for patient safety and comfort.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-header centered fade-up">
+        <span class="section-eyebrow">Our Vehicles</span>
+        <h2 class="section-title">Built for Patient Comfort and Safety</h2>
+        <p class="section-subtitle">Our fleet is thoughtfully selected and rigorously maintained to provide the safest, most comfortable rides possible.</p>
+      </div>
+      <div class="fleet-grid">
+        <div class="fleet-card stagger-child">
+          <div class="fleet-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop&q=80" alt="Wheelchair accessible medical van" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="fleet-card-body">
+            <h3>Wheelchair-Accessible Van</h3>
+            <p>Full-size accessible vans equipped with hydraulic ramps, four-point wheelchair securement systems, and spacious interiors designed to accommodate manual and power wheelchairs of all sizes.</p>
+            <div class="fleet-features">
+              <span class="fleet-tag">Hydraulic Ramp</span>
+              <span class="fleet-tag">4-Point Tie Down</span>
+              <span class="fleet-tag">Climate Control</span>
+              <span class="fleet-tag">GPS Tracked</span>
+            </div>
+          </div>
+        </div>
+        <div class="fleet-card stagger-child" style="transition-delay:0.1s">
+          <div class="fleet-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=700&auto=format&fit=crop&q=80" alt="Ambulatory transport vehicle" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="fleet-card-body">
+            <h3>Ambulatory Transport Vehicle</h3>
+            <p>Comfortable, well-maintained vehicles for ambulatory patients who can walk independently. Fitted with grab bars, non-slip surfaces, and plush seating to ensure a smooth, comfortable journey.</p>
+            <div class="fleet-features">
+              <span class="fleet-tag">Grab Bars</span>
+              <span class="fleet-tag">Non-Slip Floor</span>
+              <span class="fleet-tag">Plush Seating</span>
+              <span class="fleet-tag">First Aid Kit</span>
+            </div>
+          </div>
+        </div>
+        <div class="fleet-card stagger-child" style="transition-delay:0.2s">
+          <div class="fleet-img" style="overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=700&auto=format&fit=crop&q=80" alt="Multi-passenger medical van" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          </div>
+          <div class="fleet-card-body">
+            <h3>Multi-Passenger Medical Van</h3>
+            <p>Larger capacity vehicles designed for group medical trips or patients requiring additional attendants. Maintains the same high standards of safety and accessibility, with expanded seating and storage for medical equipment.</p>
+            <div class="fleet-features">
+              <span class="fleet-tag">6+ Capacity</span>
+              <span class="fleet-tag">Equipment Storage</span>
+              <span class="fleet-tag">Climate Control</span>
+              <span class="fleet-tag">Safety Restraints</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vehicle-features-section">
+    <div class="container">
+      <div class="section-header centered fade-up">
+        <span class="section-eyebrow" style="color:#5EDDD2">Standard Equipment</span>
+        <h2 class="section-title" style="color:white">Every Vehicle Is Fully Equipped</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.65)">We do not cut corners on safety or comfort. Every vehicle in our fleet meets these standards.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item stagger-child">
+          <svg viewBox="0 0 24 24"><path d="M19 13v-2h-2V9h-2v2h-2v2h2v2h2v-2h2zm-7-2H5c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h7c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1z"/></svg>
+          <h4>Wheelchair Accessibility</h4>
+          <p>Hydraulic lifts or ramps with industry-standard securement systems on all applicable vehicles.</p>
+        </div>
+        <div class="feature-item stagger-child" style="transition-delay:0.1s">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <h4>GPS Tracking</h4>
+          <p>Real-time GPS tracking on every vehicle for route optimization, safety monitoring, and accurate ETAs.</p>
+        </div>
+        <div class="feature-item stagger-child" style="transition-delay:0.2s">
+          <svg viewBox="0 0 24 24"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2z"/></svg>
+          <h4>Climate Control</h4>
+          <p>Full heating and air conditioning in every vehicle to maintain patient comfort in any weather condition.</p>
+        </div>
+        <div class="feature-item stagger-child" style="transition-delay:0.3s">
+          <svg viewBox="0 0 24 24"><path d="M21 6.5l-4-4-10 10-2 6 6-2 10-10z"/></svg>
+          <h4>Comfortable Seating</h4>
+          <p>Padded, supportive seating with sufficient legroom designed for patient comfort during extended journeys.</p>
+        </div>
+        <div class="feature-item stagger-child" style="transition-delay:0.4s">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          <h4>Safety Restraints</h4>
+          <p>Properly installed and inspected seat belts and wheelchair restraint systems on every vehicle, every ride.</p>
+        </div>
+        <div class="feature-item stagger-child" style="transition-delay:0.5s">
+          <svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+          <h4>Professional Maintenance</h4>
+          <p>Rigorous, regular preventive maintenance and safety inspections performed by certified technicians.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Ride in Comfort and Safety?</h2>
+      <p>Book your ride and experience our modern fleet firsthand.</p>
+      <div class="cta-banner-buttons">
+        <button class="btn-white" onclick="showPage('book')">Book Your Ride</button>
+        <a href="tel:3109627922" class="btn-outline-white">Call (310) 962-7922</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ==================== BOOK PAGE ==================== -->
+<div id="page-book" class="page">
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-eyebrow" style="color:#5EDDD2;display:block;margin-bottom:16px">Schedule a Ride</span>
+      <h1>Book Your Medical Transportation</h1>
+      <p>Complete the form below and we will reach out to confirm your ride details promptly.</p>
+    </div>
+  </div>
+
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-wrap">
+        <div class="booking-info fade-up">
+          <h2>Need a Ride?</h2>
+          <p>Fill out the booking form and your request will be sent directly to our team. We will confirm your booking as quickly as possible. For urgent requests, please call us directly.</p>
+          <div class="booking-contact-list">
+            <div class="booking-contact-item">
+              <div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+              <div>
+                <div class="label">Phone</div>
+                <div class="value"><a href="tel:3109627922">(310) 962-7922</a></div>
+              </div>
+            </div>
+            <div class="booking-contact-item">
+              <div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+              <div>
+                <div class="label">Email</div>
+                <div class="value"><a href="mailto:odesmedicaltransportation@yahoo.com">odesmedicaltransportation@yahoo.com</a></div>
+              </div>
+            </div>
+            <div class="booking-contact-item">
+              <div class="bc-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+              <div>
+                <div class="label">Hours</div>
+                <div class="value">Available 7 Days a Week</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-form-card fade-up" style="transition-delay:0.15s">
+          <div class="form-grid" id="bookingForm">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="(310) 000-0000" required>
+            </div>
+            <div class="form-group full">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group full">
+              <label for="pickupAddress">Pickup Address</label>
+              <input type="text" id="pickupAddress" placeholder="1234 Main St, City, CA 90000" required>
+            </div>
+            <div class="form-group full">
+              <label for="destination">Destination Address</label>
+              <input type="text" id="destination" placeholder="Medical Center Name, Address" required>
+            </div>
+            <div class="form-group">
+              <label for="apptDate">Appointment Date</label>
+              <input type="date" id="apptDate" required>
+            </div>
+            <div class="form-group">
+              <label for="apptTime">Appointment Time</label>
+              <input type="time" id="apptTime" required>
+            </div>
+            <div class="form-group full">
+              <label for="transportType">Transportation Type</label>
+              <select id="transportType">
+                <option value="">Select transportation type</option>
+                <option>Ambulatory Transportation</option>
+                <option>Wheelchair Transportation</option>
+                <option>Hospital Discharge</option>
+                <option>Dialysis Transportation</option>
+                <option>Physical Therapy Transport</option>
+                <option>Rehabilitation Transportation</option>
+                <option>Senior Transportation</option>
+                <option>Long Distance Medical Transport</option>
+                <option>Other Medical Appointment</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="specialReq">Special Requirements</label>
+              <textarea id="specialReq" placeholder="Please describe any special needs, mobility aids, medical equipment, or other requirements we should know about..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button class="btn-submit" onclick="submitBooking()">
+              <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+              Send Ride Request via WhatsApp
+            </button>
+            <p class="form-note">Your booking details will be sent directly to our team via WhatsApp. We will confirm your ride within a few hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ==================== CONTACT PAGE ==================== -->
+<div id="page-contact" class="page">
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-eyebrow" style="color:#5EDDD2;display:block;margin-bottom:16px">Get in Touch</span>
+      <h1>Contact ODES Medical Transportation</h1>
+      <p>We are here to answer your questions and help you schedule safe, reliable medical transportation.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <div class="contact-info-card">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+            <div>
+              <div class="ci-label">Phone</div>
+              <div class="ci-value"><a href="tel:3109627922">(310) 962-7922</a></div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-value"><a href="mailto:odesmedicaltransportation@yahoo.com">odesmedicaltransportation@yahoo.com</a></div>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div>
+              <div class="ci-label">Address</div>
+              <div class="ci-value">1204 W Gardena Blvd Suite B<br>Gardena, CA 90247</div>
+            </div>
+          </div>
+          <div class="contact-info-card" style="flex-direction:column;align-items:flex-start">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+              <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+              <div class="ci-label" style="font-size:13px;font-weight:700;color:var(--navy)">Business Hours</div>
+            </div>
+            <table class="hours-table">
+              <tr><td>Monday - Friday</td><td>6:00 AM - 9:00 PM</td></tr>
+              <tr><td>Saturday</td><td>7:00 AM - 8:00 PM</td></tr>
+              <tr><td>Sunday</td><td>8:00 AM - 6:00 PM</td></tr>
+            </table>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <a href="tel:3109627922" class="btn-primary" style="text-align:center;text-decoration:none">Call Us Now</a>
+            <button class="btn-call" style="text-align:center" onclick="showPage('book')">Book Online</button>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap fade-up" style="transition-delay:0.15s">
+          <h2>Send Us a Message</h2>
+          <p class="sub">Have a question? We will get back to you as soon as possible.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="cName" placeholder="John Smith">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="cPhone" placeholder="(310) 000-0000">
+            </div>
+            <div class="form-group full">
+              <label>Email Address</label>
+              <input type="email" id="cEmail" placeholder="john@example.com">
+            </div>
+            <div class="form-group full">
+              <label>Message</label>
+              <textarea id="cMessage" style="min-height:140px" placeholder="How can we help you?"></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button class="btn-submit" onclick="submitContact()">
+              <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              Send Message
+            </button>
+          </div>
+          <div class="success-msg" id="contactSuccess">
+            Thank you for your message. We will be in touch with you shortly.
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrap fade-up" style="margin-top:60px">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.6823!2d-118.3070!3d33.8883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1204%20W%20Gardena%20Blvd%2C%20Gardena%2C%20CA%2090247!5e0!3m2!1sen!2sus!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="ODES Medical Transportation Location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="cursor:default">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </div>
+          <div class="logo-text">
+            <span class="brand">ODES Medical</span>
+            <span class="tagline">Transportation</span>
+          </div>
+        </div>
+        <p class="footer-desc">Providing safe, reliable, and compassionate non-emergency medical transportation throughout Gardena, CA and the greater Los Angeles area. Every ride, every patient, every time.</p>
+        <div class="footer-social">
+          <a href="tel:3109627922" class="social-link" aria-label="Phone">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </a>
+          <a href="mailto:odesmedicaltransportation@yahoo.com" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('about')">About Us</a>
+          <a onclick="showPage('services')">Services</a>
+          <a onclick="showPage('fleet')">Our Fleet</a>
+          <a onclick="showPage('contact')">Contact</a>
+          <a onclick="showPage('book')">Book a Ride</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a onclick="showPage('services')">Ambulatory Transport</a>
+          <a onclick="showPage('services')">Wheelchair Transport</a>
+          <a onclick="showPage('services')">Dialysis Transport</a>
+          <a onclick="showPage('services')">Hospital Discharge</a>
+          <a onclick="showPage('services')">Senior Transport</a>
+          <a onclick="showPage('services')">Rehabilitation</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            (310) 962-7922
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            odesmedicaltransportation@yahoo.com
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            1204 W Gardena Blvd Suite B<br>Gardena, CA 90247
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>2025 ODES Medical Transportation. All rights reserved.</p>
+      <p>1204 W Gardena Blvd Suite B, Gardena, CA 90247</p>
+    </div>
+  </div>
+</footer>
+
+<!-- GSAP + ScrollTrigger CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+// ===== GSAP HERO ANIMATION =====
+gsap.registerPlugin(ScrollTrigger);
+
+function initHeroAnimation() {{
+  const heroContainer = document.getElementById('hero-scroll-container');
+  const vanStage      = document.getElementById('van-stage');
+  const vanImg        = document.getElementById('van-main-img');
+  const doorOverlay   = document.getElementById('van-door-overlay');
+  const liftOverlay   = document.getElementById('van-lift-overlay');
+  const heroText      = document.getElementById('hero-text-overlay');
+  const heroTrustRow  = document.getElementById('hero-trust-row');
+  const scrollHint    = document.getElementById('scroll-hint');
+  const ambientLeft   = document.getElementById('ambientLeft');
+  const ambientRight  = document.getElementById('ambientRight');
+  const groundRefl    = document.getElementById('groundReflection');
+
+  if (!heroContainer || !vanImg) return;
+
+  // Initial state — van starts slightly zoomed out and centered
+  gsap.set(vanStage, {{ scale: 0.78, y: 30 }});
+  gsap.set(doorOverlay, {{ scaleX: 1, transformOrigin: 'left center', opacity: 1 }});
+  gsap.set(liftOverlay, {{ scaleY: 0, transformOrigin: 'top center', opacity: 0 }});
+  gsap.set(heroText, {{ opacity: 0, y: 40 }});
+  gsap.set(heroTrustRow, {{ opacity: 0, x: 30 }});
+  gsap.set(scrollHint, {{ opacity: 1 }});
+
+  // Master timeline pinned to the scroll container
+  const tl = gsap.timeline({{
+    scrollTrigger: {{
+      trigger: heroContainer,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1.2,
+      pin: false, // container itself provides the scroll height; sticky CSS does the pin
+    }}
+  }});
+
+  // PHASE 1 (0% - 20%): Van zooms in from overview to full size, scroll hint fades
+  tl.to(vanStage, {{
+    scale: 0.95,
+    y: 0,
+    ease: 'power2.out',
+    duration: 0.2
+  }}, 0)
+  .to(scrollHint, {{
+    opacity: 0,
+    duration: 0.1
+  }}, 0)
+  // Ambient glows rise
+  .to(ambientLeft, {{ opacity: 1, duration: 0.2 }}, 0)
+  .to(ambientRight, {{ opacity: 1, duration: 0.2 }}, 0.05)
+
+  // PHASE 2 (20% - 55%): Door slides open (scaleX 1 → 0 from left origin = slides right/disappears)
+  .to(doorOverlay, {{
+    scaleX: 0,
+    ease: 'power2.inOut',
+    duration: 0.35
+  }}, 0.2)
+  // Subtle van scale pulse as door opens (the van breathes/reveals)
+  .to(vanStage, {{
+    scale: 1.0,
+    ease: 'power1.inOut',
+    duration: 0.35
+  }}, 0.25)
+  // Brightness boost as interior reveals (done via CSS filter on the image)
+  .to(vanImg, {{
+    filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.7)) drop-shadow(0 8px 20px rgba(0,0,0,0.5)) brightness(1.06)',
+    duration: 0.3
+  }}, 0.3)
+
+  // PHASE 3 (55% - 72%): Lift platform descends
+  .to(liftOverlay, {{
+    scaleY: 1,
+    opacity: 1,
+    ease: 'power2.out',
+    duration: 0.2
+  }}, 0.55)
+  // Ground reflection glows
+  .to(groundRefl, {{ opacity: 1, duration: 0.2 }}, 0.55)
+
+  // PHASE 4 (65% - 90%): Hero text fades in from bottom
+  .to(heroText, {{
+    opacity: 1,
+    y: 0,
+    ease: 'power2.out',
+    duration: 0.25
+  }}, 0.65)
+  // Trust badges slide in from right
+  .to(heroTrustRow, {{
+    opacity: 1,
+    x: 0,
+    ease: 'power2.out',
+    duration: 0.25
+  }}, 0.72)
+
+  // PHASE 5 (90% - 100%): Everything settles — very slight zoom out for elegant rest
+  .to(vanStage, {{
+    scale: 0.97,
+    ease: 'power1.inOut',
+    duration: 0.1
+  }}, 0.9);
+}}
+
+// Kickoff animation only on home page
+function maybeInitHero() {{
+  const homePage = document.getElementById('page-home');
+  if (homePage && homePage.classList.contains('active')) {{
+    ScrollTrigger.getAll().forEach(t => t.kill());
+    initHeroAnimation();
+  }}
+}}
+
+// ===== PAGE NAVIGATION =====
+function showPage(page) {{
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  window.scrollTo({{ top: 0, behavior: 'smooth' }});
+
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const navEl = document.getElementById('nav-' + page);
+  if (navEl) navEl.classList.add('active');
+
+  setTimeout(() => {{
+    ScrollTrigger.getAll().forEach(t => t.kill());
+    if (page === 'home') {{
+      initHeroAnimation();
+    }}
+    initAnimations();
+  }}, 60);
+}}
+
+// ===== MOBILE MENU =====
+function toggleMenu() {{ document.getElementById('mobileMenu').classList.toggle('open'); }}
+function closeMenu() {{ document.getElementById('mobileMenu').classList.remove('open'); }}
+
+// ===== NAV SCROLL =====
+window.addEventListener('scroll', () => {{
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+}});
+
+// ===== SCROLL ANIMATIONS (non-hero sections) =====
+function initAnimations() {{
+  const observer = new IntersectionObserver((entries) => {{
+    entries.forEach(entry => {{
+      if (entry.isIntersecting) {{
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }}
+    }});
+  }}, {{ threshold: 0.1, rootMargin: '0px 0px -40px 0px' }});
+
+  document.querySelectorAll('.fade-up, .fade-in').forEach(el => {{
+    if (!el.classList.contains('visible')) observer.observe(el);
+  }});
+
+  const staggerObserver = new IntersectionObserver((entries) => {{
+    entries.forEach(entry => {{
+      if (entry.isIntersecting) {{
+        const siblings = entry.target.parentElement.querySelectorAll('.stagger-child');
+        siblings.forEach((sib, i) => {{
+          setTimeout(() => sib.classList.add('visible'), i * 80);
+        }});
+        staggerObserver.unobserve(entry.target);
+      }}
+    }});
+  }}, {{ threshold: 0.05 }});
+
+  document.querySelectorAll('.stagger-child:first-child').forEach(el => {{
+    if (!el.classList.contains('visible')) staggerObserver.observe(el);
+  }});
+
+  initCounters();
+}}
+
+// ===== COUNTERS =====
+function initCounters() {{
+  const counterObserver = new IntersectionObserver((entries) => {{
+    entries.forEach(entry => {{
+      if (entry.isIntersecting && !entry.target.dataset.animated) {{
+        entry.target.dataset.animated = 'true';
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }}
+    }});
+  }}, {{ threshold: 0.5 }});
+
+  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+}}
+
+function animateCounter(el) {{
+  const target = parseInt(el.dataset.target);
+  const duration = 2000;
+  const start = performance.now();
+
+  function update(time) {{
+    const elapsed = time - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target).toLocaleString();
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = target.toLocaleString();
+  }}
+
+  requestAnimationFrame(update);
+}}
+
+// ===== BOOKING FORM =====
+function submitBooking() {{
+  const name    = document.getElementById('fullName').value.trim();
+  const phone   = document.getElementById('phone').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const pickup  = document.getElementById('pickupAddress').value.trim();
+  const dest    = document.getElementById('destination').value.trim();
+  const date    = document.getElementById('apptDate').value;
+  const time    = document.getElementById('apptTime').value;
+  const type    = document.getElementById('transportType').value;
+  const special = document.getElementById('specialReq').value.trim();
+
+  if (!name || !phone || !pickup || !dest || !date || !time) {{
+    alert('Please fill in all required fields before submitting.');
+    return;
+  }}
+
+  const dateObj = date ? new Date(date + 'T00:00:00') : null;
+  const formattedDate = dateObj ? dateObj.toLocaleDateString('en-US', {{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }}) : date;
+
+  let formattedTime = time;
+  if (time) {{
+    const [h, m] = time.split(':');
+    const hour = parseInt(h);
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    formattedTime = `${{hour % 12 || 12}}:${{m}} ${{ampm}}`;
+  }}
+
+  const message = `*New Ride Request - ODES Medical Transportation*
+
+*Name:* ${{name}}
+*Phone:* ${{phone}}
+*Email:* ${{email || 'Not provided'}}
+*Pickup Address:* ${{pickup}}
+*Destination:* ${{dest}}
+*Appointment Date:* ${{formattedDate}}
+*Appointment Time:* ${{formattedTime}}
+*Transportation Type:* ${{type || 'Not specified'}}
+*Special Requirements:* ${{special || 'None'}}`;
+
+  const whatsappNumber = '13109627922';
+  const waURL = `https://wa.me/${{whatsappNumber}}?text=${{encodeURIComponent(message)}}`;
+  window.open(waURL, '_blank');
+}}
+
+// ===== CONTACT FORM =====
+function submitContact() {{
+  const name    = document.getElementById('cName').value.trim();
+  const phone   = document.getElementById('cPhone').value.trim();
+  const email   = document.getElementById('cEmail').value.trim();
+  const message = document.getElementById('cMessage').value.trim();
+
+  if (!name || !message) {{
+    alert('Please fill in your name and message.');
+    return;
+  }}
+
+  const waMessage = `*Message from Website - ODES Contact Form*
+
+*Name:* ${{name}}
+*Phone:* ${{phone || 'Not provided'}}
+*Email:* ${{email || 'Not provided'}}
+*Message:* ${{message}}`;
+
+  const whatsappNumber = '13109627922';
+  window.open(`https://wa.me/${{whatsappNumber}}?text=${{encodeURIComponent(waMessage)}}`, '_blank');
+
+  document.getElementById('contactSuccess').style.display = 'block';
+  document.getElementById('cName').value = '';
+  document.getElementById('cPhone').value = '';
+  document.getElementById('cEmail').value = '';
+  document.getElementById('cMessage').value = '';
+}}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {{
+  // Set min date for booking form
+  const today = new Date().toISOString().split('T')[0];
+  const dateInput = document.getElementById('apptDate');
+  if (dateInput) dateInput.min = today;
+
+  // Init hero animation
+  maybeInitHero();
+
+  // Init general animations
+  initAnimations();
+}});
+</script>
+
+</body>
+</html>'''
